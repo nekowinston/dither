@@ -6,5 +6,4 @@ pub use self::{
     ditherer::{Dither, Ditherer},
     error::{Error, IOError, Result},
     img::Img,
-    opts::Opt,
 };

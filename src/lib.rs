@@ -9,7 +9,6 @@ pub mod color;
 pub mod ditherer;
 mod error;
 mod img;
-mod opts;
 pub mod prelude;
 pub use self::error::Error;
 pub use self::error::Result;

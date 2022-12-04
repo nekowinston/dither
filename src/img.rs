@@ -111,7 +111,7 @@ impl<N: From<u8>> Img<RGB<N>> {
     /// assert_eq!(img.size(), (480, 320));
     /// ```
     pub fn load(path: impl AsRef<Path>) -> Result<Self> {
-        match image::open(&path).and_then(|img| Ok(img.to_rgb())) {
+        match image::open(&path).and_then(|img| Ok(img.to_rgb8())) {
             Err(err) => Err(Error::input(err, path.as_ref())),
             Ok(img) => Ok(Img {
                 buf: img.pixels().map(|p| RGB::from(p.0)).collect(),
